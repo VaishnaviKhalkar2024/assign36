@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+</head>
+<style>
+    .text_center
+    {
+     text-align: center;
+     color: black;
+    }
+    .input_text{
+        height: 50px;
+        width: 340px;
+        border-radius:50px;
+        margin:  50px 40px;
+        display: block;
+        margin: 40px 30px;
+        border: none;
+        border:rgb(238, 217, 189) solid 2px;
+    }
+    .btn{
+        height: 30px;
+        width: 100px;
+        margin: 5px;
+        border:none;
+        border-radius: 15px;
+        display: block;
+        margin: 10px auto;
+        padding: 5px 10px;
+        color:black;
+        background-color:#fff;
+        cursor: pointer;
+        border:rgb(238, 217, 189) solid 1px;
+    }
+    .btn:hover{
+       text-decoration: underline;
+        border-radius: 10px;
+        padding:7px 12px;
+        transition: 2s;
+    
+    }
+    .container{
+        display: block;
+        height:500px ;
+        width: 400px;
+        border-radius:20px;
+        margin: 50px auto;
+        background-color:antiquewhite;
+        box-shadow:2px 5px 5px 7px rgb(202, 197, 197);
+        border:rgb(238, 217, 189) solid 1px;
+    }
+    .contaner:hover{
+        box-shadow:none;
+    }
+    .text{
+        height: 40px;
+        width: 300px;
+        border:none;
+        margin: 200px auto 20px auto;
+        border-radius: 20px;
+        padding: 20px 30px;
+        background-color: #fff;
+        color: black;
+        font-size: 20px;
+        border:rgb(238, 217, 189) solid 2px;
+     }
+</style>
+<body>
+    <h1 class="text_center">Phone Book</h1>
+    <div class="container">
+    <input class="input_text"  id="search" placeholder="search">
+    <button class="btn" onclick="searchbtn()"> Search</button>  
+    <div id="result" class="text"></div>
+    </div>
+<script>
+    const  contacts={
+        "vaishnavi":7796838017,
+        "asha":9922128476,
+        "anuja":9922468476,
+        "satyam":9479774974,
+        "harshada":7580390294,
+        "rahul":6578390290,
+        "vaishali":6579302666,
+        "anil":7799999466,
+    }
+    function searchbtn()
+    {
+     const searchInput=document.getElementById("search");
+     const query=searchInput.value.toLowerCase();
+     const  mobile =contacts[query]
+     if(mobile){
+        result.innerText=`Mobile number of ${query} is ${mobile}`;
+     }
+     else{
+        result.innerText =`Mobile  number not found`;
+     }
+     }
+</script>
+</body>
+</html>
+    
